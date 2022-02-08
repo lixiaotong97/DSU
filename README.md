@@ -1,4 +1,4 @@
-# Uncertainty Modeling for Out of Distribution Generalization (DSU)
+# Uncertainty Modeling for Out-of-Distribution Generalization (DSU)
 Official implementation of "[Uncertainty Modeling for Out-of-Distribution Generalization](https://openreview.net/forum?id=6HN7LHyzGgC)" in International Conference on Learning Representations (ICLR) 2022. 
 
 By Xiaotong Li, Yongxing Dai, Yixiao Ge, Jun Liu, Ying Shan, Ling-Yu Duan. 
