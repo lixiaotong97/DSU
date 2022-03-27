@@ -1,0 +1,19 @@
+MODEL:
+  NAME: "deeplab_resnet101"
+  WEIGHTS: "https://download.pytorch.org/models/resnet101-5d3b4d8f.pth"
+  FREEZE_BN: True
+  NUM_CLASSES: 16
+DATASETS:
+  SOURCE_TRAIN: "synthia_train"
+  TEST: "cityscapes_val"
+INPUT:
+  SOURCE_INPUT_SIZE_TRAIN: (1280, 760)
+  # PIXEL_MEAN: [103.939, 116.779, 123.68]
+  # PIXEL_MEAN: [104.00698793, 116.66876762, 122.67891434]
+  # PIXEL_STD: [1., 1., 1.]
+  # TO_BGR255: True
+SOLVER:
+  BASE_LR: 5e-4
+  MAX_ITER: 31250
+  STOP_ITER: 20000
+  BATCH_SIZE: 8

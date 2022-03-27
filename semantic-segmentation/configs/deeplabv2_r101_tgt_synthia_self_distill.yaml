@@ -1,0 +1,22 @@
+MODEL:
+  NAME: "deeplab_resnet101"
+  WEIGHTS: "https://download.pytorch.org/models/resnet101-5d3b4d8f.pth"
+  FREEZE_BN: True
+  NUM_CLASSES: 16
+DATASETS:
+  SOURCE_TRAIN: "cityscapes_self_distill_train"
+  TEST: "cityscapes_val"
+INPUT:
+  SOURCE_INPUT_SIZE_TRAIN: (1024, 512)
+  INPUT_SIZE_TEST: (2048, 1024)
+  INPUT_SCALES_TRAIN: (0.5, 1.5)
+  HORIZONTAL_FLIP_PROB_TRAIN: 0.5
+  BRIGHTNESS: 0.5
+  CONTRAST: 0.5
+  SATURATION: 0.5
+  HUE: 0.2
+SOLVER:
+  BASE_LR: 5e-4
+  MAX_ITER: 31250
+  STOP_ITER: 20000
+  BATCH_SIZE: 8

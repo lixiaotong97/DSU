@@ -1,0 +1,25 @@
+MODEL:
+  NAME: "deeplab_vgg16"
+  # weights from https://github.com/jcjohnson/pytorch-vgg
+  # please note that a different classifier name is defined as stated in https://github.com/jcjohnson/pytorch-vgg/issues/3
+  WEIGHTS: "https://web.eecs.umich.edu/~justincj/models/vgg16-00b39a1b.pth"
+  NUM_CLASSES: 16
+DATASETS:
+  SOURCE_TRAIN: "synthia_train"
+  TARGET_TRAIN: "cityscapes_train"
+  TEST: "cityscapes_val"
+INPUT:
+  PIXEL_MEAN: [103.939, 116.779, 123.68]
+  PIXEL_STD: [1., 1., 1.]
+  TO_BGR255: True
+  SOURCE_INPUT_SIZE_TRAIN: (1280, 760)
+  BRIGHTNESS: 0.5
+  CONTRAST: 0.5
+  SATURATION: 0.5
+  HUE: 0.2
+SOLVER:
+  BASE_LR: 2.5e-4
+  BASE_LR_D: 1e-4
+  MAX_ITER: 62500
+  STOP_ITER: 40000
+  BATCH_SIZE: 8
